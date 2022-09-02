@@ -20,4 +20,20 @@ class CustomARView: ARView {
     convenience init() {
         self.init(frame: UIScreen.main.bounds)
     }
+    
+    func configurationExamples() {
+        // Track the device relative to it's environment
+        let configuration = ARWorldTrackingConfiguration()
+        session.run(configuration)
+
+        // Not supported everywhere, track w.r.t global coordinates
+        let _ = ARGeoTrackingConfiguration()
+        
+        // Tracks faces in the scene
+        let _ = ARFaceTrackingConfiguration()
+
+        // Tracks bodies in the scene
+        let _ = ARBodyTrackingConfiguration()
+
+    }
 }
