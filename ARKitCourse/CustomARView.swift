@@ -73,7 +73,7 @@ class CustomARView: ARView {
     }
     
     func placeBlueBlock() {
-        let block = MeshResource.generateBox(size: 1)
+        let block = MeshResource.generateBox(size: 0.5)
         let material = SimpleMaterial(color: .blue, isMetallic: false)
         let entity = ModelEntity(mesh: block, materials: [material])
         
